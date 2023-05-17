@@ -4,10 +4,12 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import './Content.jsx'
 import List from './Content.jsx'
+import ChildComponent from './Components/FunctComponents/FunctComponents'
 
 function App() {
   const [count, setCount] = useState(0)
   const me = <a href='https://www.linkedin.com/in/manuelgardon/'>Manuel</a>
+  const msg = "Today, we learnt about class & functional components + prop Children + fragment"
 
   return (
     <div className="App">
@@ -27,10 +29,10 @@ function App() {
       <h1>Vite + React with {me}</h1>
       
       <div className="card">
-        <List/>
-      </div>
+    
+        <ChildComponent name="Juan" message={msg}/>
 
-      <h2>Congratulations! Now, you have your own React + Vite project.</h2>
+      </div>
     
     </div>
 )
